@@ -199,3 +199,38 @@ const GALLERY_IMAGES = [
   );
   map.forEach((a, el) => io.observe(el));
 })();
+
+/* ---- Remember scroll position ----
+   Decks/CVs open as PDFs; on browsers that open them in the same view (common
+   on mobile), pressing Back reloads the page and the scroll-reveal resets it to
+   the top. Persist the scroll position and restore it so Back continues from
+   where the visitor was. (pagehide — not beforeunload — so bfcache still works.) */
+(function () {
+  const KEY = "portfolio:scrollY";
+  if ("scrollRestoration" in history) history.scrollRestoration = "manual";
+
+  let t, restoring = false;
+  const save = () => { if (restoring) return; try { sessionStorage.setItem(KEY, String(Math.round(window.scrollY))); } catch (e) {} };
+  addEventListener("scroll", () => { clearTimeout(t); t = setTimeout(save, 120); }, { passive: true });
+  addEventListener("pagehide", save);
+  document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") save(); });
+
+  function restore() {
+    let y = 0;
+    try { y = parseInt(sessionStorage.getItem(KEY) || "0", 10) || 0; } catch (e) {}
+    if (y <= 0) return;
+    // hold the saved value steady while we re-assert the jump
+    restoring = true;
+    // settle every reveal so section heights are final before we jump
+    document.querySelectorAll(".reveal, .rise").forEach((x) => x.classList.add("is-in", "in"));
+    window.scrollTo(0, y);
+    // re-assert across layout + late (lazy image) reflows
+    requestAnimationFrame(() => window.scrollTo(0, y));
+    setTimeout(() => window.scrollTo(0, y), 60);
+    setTimeout(() => window.scrollTo(0, y), 300);
+    setTimeout(() => { restoring = false; }, 450);
+  }
+  addEventListener("pageshow", restore);
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", restore);
+  else restore();
+})();
