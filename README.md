@@ -27,7 +27,7 @@ portfolio/
 ├─ assets/             ← all images/videos used by the site
 ├─ projects/           ← project decks (PDFs) + the MyShop source zip
 ├─ writing/            ← dissertation, presentation and report PDFs
-└─ cv/                 ← CV (YasminSapoglu-CV.docx)
+└─ cv/                 ← CV: PDF is what the site links; .docx kept as the editable source
 ```
 
 ## The 5 things you'll actually edit
