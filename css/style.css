@@ -133,6 +133,11 @@ em { font-style: italic; color: var(--accent); }
 .cardslide__cap { position: absolute; left: .7rem; top: .6rem; z-index: 3; background: rgba(20,14,8,.62); color: #fff; font-size: .72rem; font-weight: 600; letter-spacing: .02em; padding: .28rem .65rem; border-radius: 999px; }
 .card__media--demo:hover::after { opacity: 1; }
 
+/* "Back to top" cover (This Website card) */
+.card__media--top { display: flex; align-items: center; justify-content: center; text-decoration: none; transition: filter .3s; }
+.card__media--top span { font-family: "Fraunces", serif; font-weight: 500; font-size: 1.15rem; color: #5b3fa8; opacity: .85; }
+.card:hover .card__media--top span { opacity: 1; }
+
 /* Icon cover (line-art logo, e.g. Vera) */
 .card__media--icon { display: flex; align-items: center; justify-content: center; }
 .card__media--icon svg { width: 56%; height: auto; }
