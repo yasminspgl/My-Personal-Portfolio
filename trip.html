@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trip — Yasmin Sapoglu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/zermatt.css" />
+</head>
+<body>
+  <div class="z-wrap">
+    <div class="z-top">
+      <a href="index.html" class="z-back">← Back to portfolio</a>
+      <span class="z-flag" id="tFlag"></span>
+    </div>
+
+    <header class="z-header">
+      <p class="z-eyebrow">A trip in pictures</p>
+      <h1 class="z-title" id="tTitle"></h1>
+      <p class="z-sub" id="tSub"></p>
+      <p class="z-intro" id="tIntro"></p>
+    </header>
+
+    <div class="z-gallery" id="zGallery"></div>
+
+    <footer class="z-footer">
+      Shot on the mountain · <a href="index.html">back to portfolio</a>
+    </footer>
+  </div>
+
+  <div class="z-lb" id="zLb">
+    <button class="z-lb-close" id="zLbClose" aria-label="Close">✕</button>
+    <img src="" alt="" id="zLbImg" />
+  </div>
+
+  <script src="js/trips.js"></script>
+  <script src="js/trip.js"></script>
+</body>
+</html>

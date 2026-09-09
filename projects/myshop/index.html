@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MyShop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f1ea;          /* warm cream */
+    --card:#ffffff;
+    --ink:#211d1a;         /* near-black warm */
+    --sub:#8c837a;         /* muted taupe */
+    --line:#ece4d9;
+    --accent:#c9603f;      /* terracotta */
+    --accent-soft:#f4e1d8;
+    --gold:#e3a83b;
+    --tile:#f3ece3;        /* image tile bg */
+    --shadow:0 24px 60px rgba(50,35,25,.22);
+    --serif:"Fraunces",Georgia,serif;
+    --sans:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{
+    background:
+      radial-gradient(1200px 600px at 20% -10%, #efe6da, transparent),
+      radial-gradient(900px 500px at 100% 110%, #e7d9c9, transparent),
+      #ddccbb;
+    font-family:var(--sans);color:var(--ink);
+    display:flex;align-items:center;justify-content:center;padding:28px;
+  }
+
+  /* ---------- phone frame ---------- */
+  .phone{
+    width:392px;max-width:100%;height:min(800px,94vh);background:var(--bg);
+    border-radius:44px;box-shadow:var(--shadow);overflow:hidden;position:relative;
+    display:flex;flex-direction:column;border:11px solid #17130f;
+  }
+  .notch{
+    position:absolute;top:0;left:50%;transform:translateX(-50%);
+    width:130px;height:26px;background:#17130f;border-radius:0 0 16px 16px;z-index:20;
+  }
+
+  /* ---------- header ---------- */
+  .nav{
+    position:relative;z-index:10;flex:0 0 auto;
+    padding:40px 20px 14px;display:flex;align-items:center;gap:10px;
+    background:linear-gradient(180deg,var(--bg) 60%,rgba(246,241,234,0));
+  }
+  .icon-btn{
+    width:40px;height:40px;border:none;border-radius:50%;background:#fff;
+    box-shadow:0 4px 14px rgba(60,40,25,.10);cursor:pointer;display:flex;
+    align-items:center;justify-content:center;color:var(--ink);font-size:18px;
+    transition:transform .12s, opacity .15s;flex:0 0 auto;
+  }
+  .icon-btn:active{transform:scale(.92)}
+  #backBtn{opacity:0;pointer-events:none}
+  #backBtn.show{opacity:1;pointer-events:auto}
+  .nav .title{
+    flex:1;text-align:center;font-family:var(--serif);font-weight:600;
+    font-size:21px;letter-spacing:.2px;
+  }
+  .basket-wrap{position:relative}
+  .badge{
+    position:absolute;top:-4px;right:-4px;background:var(--accent);color:#fff;
+    font-size:11px;font-weight:700;min-width:19px;height:19px;border-radius:10px;
+    display:flex;align-items:center;justify-content:center;padding:0 5px;
+    border:2px solid var(--bg);
+  }
+
+  /* ---------- scroll area ---------- */
+  .screen{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:4px 18px 26px}
+  .screen::-webkit-scrollbar{width:0}
+  .page{animation:slide .32s cubic-bezier(.2,.8,.2,1)}
+  @keyframes slide{from{opacity:0;transform:translateX(16px)}to{opacity:1;transform:none}}
+  .page.back{animation:slideBack .32s cubic-bezier(.2,.8,.2,1)}
+  @keyframes slideBack{from{opacity:0;transform:translateX(-16px)}to{opacity:1;transform:none}}
+
+  .eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:2px 4px 2px}
+  .hero-h{font-family:var(--serif);font-size:30px;line-height:1.1;margin:2px 4px 18px;font-weight:600}
+
+  /* ---------- big menu cards (home) ---------- */
+  .bigcard{
+    background:var(--card);border-radius:24px;padding:22px;margin-bottom:16px;cursor:pointer;
+    box-shadow:0 10px 30px rgba(70,45,25,.07);border:1px solid var(--line);
+    display:flex;align-items:center;gap:18px;transition:transform .14s, box-shadow .14s;
+  }
+  .bigcard:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(70,45,25,.12)}
+  .bigcard:active{transform:translateY(0)}
+  .bigcard .emoji{
+    width:58px;height:58px;border-radius:18px;background:var(--accent-soft);
+    display:flex;align-items:center;justify-content:center;font-size:26px;flex:0 0 auto;
+  }
+  .bigcard .bc-txt{flex:1;min-width:0}
+  .bigcard .bc-txt h3{margin:0 0 3px;font-size:18px;font-weight:600}
+  .bigcard .bc-txt p{margin:0;color:var(--sub);font-size:13.5px}
+  .bigcard .go{color:var(--accent);font-size:22px}
+
+  /* ---------- category list cards ---------- */
+  .cat{
+    background:var(--card);border-radius:18px;padding:16px 18px;margin-bottom:12px;cursor:pointer;
+    display:flex;align-items:center;gap:14px;border:1px solid var(--line);
+    box-shadow:0 6px 18px rgba(70,45,25,.05);transition:transform .14s, box-shadow .14s;
+  }
+  .cat:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(70,45,25,.10)}
+  .cat:active{transform:translateY(0)}
+  .cat .emoji{
+    width:44px;height:44px;border-radius:13px;background:var(--tile);
+    display:flex;align-items:center;justify-content:center;font-size:20px;flex:0 0 auto;
+  }
+  .cat .label{flex:1;font-weight:600;font-size:15.5px}
+  .cat .go{color:#cdbfae;font-size:20px}
+
+  /* ---------- product grid ---------- */
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px}
+  .prod{
+    background:var(--card);border-radius:20px;overflow:hidden;border:1px solid var(--line);
+    box-shadow:0 8px 22px rgba(70,45,25,.06);display:flex;flex-direction:column;
+    transition:transform .14s, box-shadow .14s;
+  }
+  .prod:hover{transform:translateY(-3px);box-shadow:0 16px 32px rgba(70,45,25,.12)}
+  .prod .thumb{
+    background:var(--tile);aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;padding:14px;
+  }
+  .prod .thumb img{max-width:100%;max-height:100%;object-fit:contain;mix-blend-mode:multiply}
+  .prod .info{padding:12px 13px 14px;display:flex;flex-direction:column;gap:8px;flex:1}
+  .prod .pname{font-size:13.5px;line-height:1.3;font-weight:500;flex:1}
+  .prod .prow{display:flex;align-items:center;justify-content:space-between;gap:6px}
+  .prod .price{font-family:var(--serif);font-weight:600;font-size:17px}
+  .prod .price::before{content:"£";font-size:13px;opacity:.7;margin-right:1px}
+  .add{
+    border:none;background:var(--ink);color:#fff;width:34px;height:34px;border-radius:50%;
+    font-size:20px;line-height:1;cursor:pointer;flex:0 0 auto;display:flex;align-items:center;
+    justify-content:center;transition:transform .12s, background .15s;
+  }
+  .add:hover{background:var(--accent)}
+  .add:active{transform:scale(.88)}
+
+  /* ---------- basket ---------- */
+  .bitem{
+    background:var(--card);border-radius:18px;padding:12px;margin-bottom:12px;
+    display:grid;grid-template-columns:64px 1fr auto;gap:13px;align-items:center;
+    border:1px solid var(--line);box-shadow:0 6px 16px rgba(70,45,25,.05);
+  }
+  .bitem .thumb{width:64px;height:64px;border-radius:12px;background:var(--tile);
+    display:flex;align-items:center;justify-content:center;padding:8px}
+  .bitem .thumb img{max-width:100%;max-height:100%;object-fit:contain;mix-blend-mode:multiply}
+  .bitem .bname{font-size:14px;font-weight:500;line-height:1.3}
+  .bitem .bprice{color:var(--sub);font-size:13px;margin-top:3px}
+  .bitem .bprice::before{content:"£"}
+  .remove{border:none;background:var(--tile);color:var(--sub);width:30px;height:30px;
+    border-radius:50%;cursor:pointer;font-size:16px;transition:.14s}
+  .remove:hover{background:var(--accent-soft);color:var(--accent)}
+
+  .summary{background:var(--card);border-radius:20px;border:1px solid var(--line);
+    padding:18px;margin-top:6px;box-shadow:0 8px 22px rgba(70,45,25,.06)}
+  .sline{display:flex;justify-content:space-between;color:var(--sub);font-size:14px;margin-bottom:9px}
+  .sline .v::before{content:"£"}
+  .sline.total{color:var(--ink);font-weight:700;font-size:17px;margin:12px 0 0;
+    padding-top:13px;border-top:1px solid var(--line)}
+  .sline.total .v{font-family:var(--serif)}
+  .checkout{
+    width:100%;margin-top:16px;padding:16px;border:none;border-radius:16px;
+    background:var(--ink);color:#fff;font-weight:600;font-size:15.5px;letter-spacing:.03em;
+    cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;
+    transition:transform .12s, background .15s;
+  }
+  .checkout:hover{background:var(--accent)}
+  .checkout:active{transform:translateY(1px)}
+
+  .empty{padding:70px 24px;text-align:center;color:var(--sub)}
+  .empty .big{font-size:52px;margin-bottom:14px}
+  .empty p{margin:0 0 18px;font-size:14px}
+  .empty button{border:1px solid var(--ink);background:transparent;color:var(--ink);
+    padding:11px 22px;border-radius:12px;font-weight:600;cursor:pointer;font-family:var(--sans)}
+
+  /* ---------- toast ---------- */
+  .toast{
+    position:absolute;left:50%;bottom:28px;transform:translateX(-50%) translateY(24px);
+    background:var(--ink);color:#fff;padding:13px 20px;border-radius:14px;font-size:13.5px;
+    font-weight:500;opacity:0;transition:.28s cubic-bezier(.2,.8,.2,1);pointer-events:none;
+    z-index:30;box-shadow:0 12px 30px rgba(0,0,0,.3);display:flex;align-items:center;gap:8px;
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+  <div class="phone">
+    <div class="notch"></div>
+    <div class="nav">
+      <button class="icon-btn" id="backBtn" aria-label="Back">‹</button>
+      <div class="title" id="navTitle">MyShop</div>
+      <div class="basket-wrap">
+        <button class="icon-btn" id="basketBtn" aria-label="Basket">🛍️</button>
+        <span class="badge" id="badge">0</span>
+      </div>
+    </div>
+    <div class="screen" id="screen"></div>
+    <div class="toast" id="toast"></div>
+  </div>
+
+<script>
+// ---- Product catalog (from the original Xamarin pages) ----
+const P = {
+  stool:   {name:"Animal Shape Storage Stool", price:276.76, img:"https://images-na.ssl-images-amazon.com/images/I/41%2BE9X7AFUL._.jpg"},
+  coffee:  {name:"Coffee Stool with Backrest", price:156.71, img:"https://images-na.ssl-images-amazon.com/images/I/31sciL4h0gL._.jpg"},
+  cushion: {name:"Cushion Cover (18x18\") — Set of 2", price:15.95, img:"https://images-na.ssl-images-amazon.com/images/I/51n3-%2Bc9MNL._.jpg"},
+  pillow:  {name:"Pillowcase 50×50cm", price:6.26, img:"https://images-na.ssl-images-amazon.com/images/I/61Fz%2Bait5nL._.jpg"},
+  bag:     {name:"Small Travel Cosmetic Bag", price:9.34, img:"https://images-na.ssl-images-amazon.com/images/I/41NSNt%2B6tCL._.jpg"},
+  towel:   {name:"Soft Towel 13×29 inch", price:10.54, img:"https://images-na.ssl-images-amazon.com/images/I/41TcKZs4RzL._.jpg"},
+  mirror:  {name:"Wall-Mounted Bathroom Mirror", price:195.48, img:"https://images-na.ssl-images-amazon.com/images/I/41fH57V4BCL._.jpg"},
+  doormat: {name:"Doormat 23.6 × 15.7 inch", price:8.93, img:"https://images-na.ssl-images-amazon.com/images/I/518MQTFiAcL._.jpg"},
+};
+
+// ---- Pages (mirrors the app's navigation) ----
+const PAGES = {
+  main:  {title:"MyShop", home:true},
+  shop:  {title:"Shop", cats:[
+            {label:"All Products", emoji:"🛒", go:"allProducts"},
+            {label:"Beauty", emoji:"💄", go:"beauty"},
+            {label:"Clothing, Shoes & Accessories", emoji:"👜", go:"clothing"},
+            {label:"Home", emoji:"🏠", go:"home"},
+         ]},
+  home:  {title:"Home", cats:[
+            {label:"Bath", emoji:"🛁", go:"bath"},
+            {label:"Furniture", emoji:"🪑", go:"furniture"},
+            {label:"Home Decor", emoji:"🖼️", go:"homeDecor"},
+            {label:"Home Textiles", emoji:"🧵", go:"homeTextiles"},
+         ]},
+  beauty:{title:"Beauty", cats:[{label:"Makeup", emoji:"💋", go:"makeup"}]},
+  clothing:{title:"Clothing & Accessories", cats:[{label:"Accessories", emoji:"👜", go:"accessories"}]},
+
+  allProducts:{title:"All Products", products:["stool","coffee","cushion","pillow","bag","towel","mirror"]},
+  bath:      {title:"Bath", products:["towel","mirror"]},
+  furniture: {title:"Furniture", products:["stool","coffee"]},
+  homeDecor: {title:"Home Decor", products:["doormat"]},
+  homeTextiles:{title:"Home Textiles", products:["cushion","pillow"]},
+  makeup:    {title:"Makeup", products:["mirror"]},
+  accessories:{title:"Accessories", products:["bag"]},
+  basket:    {title:"Basket", isBasket:true},
+};
+
+// basket starts with the two items hard-coded in the original ShoppingBasketPage
+let basket = ["cushion","mirror"];
+let stack = ["main"];
+let goingBack = false;
+
+const screen  = document.getElementById("screen");
+const navTitle= document.getElementById("navTitle");
+const backBtn = document.getElementById("backBtn");
+const badge   = document.getElementById("badge");
+const toastEl = document.getElementById("toast");
+
+const money = n => n.toFixed(2);
+const updateBadge = () => { badge.textContent = basket.length; badge.style.display = basket.length? "flex":"none"; };
+
+function toast(msg){
+  toastEl.innerHTML = `<span>✓</span> ${msg}`;
+  toastEl.classList.add("show");
+  clearTimeout(toast._t);
+  toast._t = setTimeout(()=>toastEl.classList.remove("show"),1500);
+}
+function push(page){ goingBack=false; stack.push(page); render(); }
+function pop(){ if(stack.length>1){ goingBack=true; stack.pop(); render(); } }
+
+function render(){
+  const key = stack[stack.length-1];
+  const page = PAGES[key];
+  navTitle.textContent = page.title;
+  backBtn.classList.toggle("show", stack.length>1);
+
+  let html = `<div class="page ${goingBack?'back':''}">`;
+
+  if(page.home){
+    html += `<div class="eyebrow">Welcome back</div>
+             <div class="hero-h">What are we<br>shopping for today?</div>
+             <div class="bigcard" data-go="shop">
+               <div class="emoji">🛍️</div>
+               <div class="bc-txt"><h3>Shop</h3><p>Browse products by category</p></div>
+               <div class="go">›</div>
+             </div>
+             <div class="bigcard" data-go="basket">
+               <div class="emoji">🧺</div>
+               <div class="bc-txt"><h3>Shopping basket</h3><p>${basket.length} item${basket.length===1?"":"s"} · £${money(basket.reduce((s,id)=>s+P[id].price,0))}</p></div>
+               <div class="go">›</div>
+             </div>`;
+  }
+  else if(page.cats){
+    page.cats.forEach(c=>{
+      html += `<div class="cat" data-go="${c.go}">
+                 <div class="emoji">${c.emoji}</div>
+                 <div class="label">${c.label}</div>
+                 <div class="go">›</div>
+               </div>`;
+    });
+  }
+  else if(page.products){
+    html += '<div class="grid">';
+    page.products.forEach(id=>{
+      const p = P[id];
+      html += `<div class="prod">
+                 <div class="thumb"><img src="${p.img}" alt="" loading="lazy"/></div>
+                 <div class="info">
+                   <div class="pname">${p.name}</div>
+                   <div class="prow">
+                     <div class="price">${money(p.price)}</div>
+                     <button class="add" data-add="${id}" aria-label="Add to basket">+</button>
+                   </div>
+                 </div>
+               </div>`;
+    });
+    html += '</div>';
+  }
+  else if(page.isBasket){
+    if(basket.length===0){
+      html += `<div class="empty">
+                 <div class="big">🧺</div>
+                 <p>Your basket is empty.</p>
+                 <button data-go-root="shop">Start shopping</button>
+               </div>`;
+    } else {
+      let total = 0;
+      basket.forEach((id,idx)=>{
+        const p = P[id]; total += p.price;
+        html += `<div class="bitem">
+                   <div class="thumb"><img src="${p.img}" alt="" loading="lazy"/></div>
+                   <div><div class="bname">${p.name}</div><div class="bprice">${money(p.price)}</div></div>
+                   <button class="remove" data-remove="${idx}" aria-label="Remove">×</button>
+                 </div>`;
+      });
+      html += `<div class="summary">
+                 <div class="sline"><span>Subtotal</span><span class="v">${money(total)}</span></div>
+                 <div class="sline"><span>Delivery</span><span>Free</span></div>
+                 <div class="sline total"><span>Total</span><span class="v">${money(total)}</span></div>
+                 <button class="checkout" id="checkoutBtn">Check out · £${money(total)}</button>
+               </div>`;
+    }
+  }
+
+  html += '</div>';
+  screen.innerHTML = html;
+  screen.scrollTop = 0;
+  updateBadge();
+}
+
+// event delegation
+screen.addEventListener("click",e=>{
+  const go = e.target.closest("[data-go]");
+  if(go){ push(go.dataset.go); return; }
+
+  const root = e.target.closest("[data-go-root]");
+  if(root){ stack=["main",root.dataset.goRoot]; goingBack=false; render(); return; }
+
+  const add = e.target.closest("[data-add]");
+  if(add){ basket.push(add.dataset.add); updateBadge(); toast("Added to basket"); return; }
+
+  const rem = e.target.closest("[data-remove]");
+  if(rem){ basket.splice(+rem.dataset.remove,1); render(); return; }
+
+  if(e.target.id==="checkoutBtn"){
+    toast("Order placed — thank you!");
+    basket = []; setTimeout(render,350);
+  }
+});
+
+backBtn.addEventListener("click",pop);
+document.getElementById("basketBtn").addEventListener("click",()=>{
+  if(stack[stack.length-1]!=="basket") push("basket");
+});
+
+render();
+</script>
+</body>
+</html>

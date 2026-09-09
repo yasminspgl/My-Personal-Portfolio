@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zermatt — Yasmin Sapoglu</title>
+  <meta name="description" content="A few days in Zermatt — snow, mountains, and very good food." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <link rel="stylesheet" href="css/style.css?v=3" />
+  <link rel="stylesheet" href="css/zermatt.css?v=2" />
+</head>
+<body>
+  <div class="z-wrap">
+    <div class="z-top">
+      <a href="index.html" class="z-back">← Back to portfolio</a>
+      <span class="z-flag">🇨🇭</span>
+    </div>
+
+    <header class="z-header">
+      <p class="z-eyebrow">A trip in pictures</p>
+      <h1 class="z-title">Zermatt</h1>
+      <p class="z-sub">January 2026 · Switzerland · four days on the mountain</p>
+      <div class="z-stats">
+        <span><b>22</b> runs</span>
+        <span><b>59.6</b> km</span>
+        <span><b>9,370</b> m vertical</span>
+        <span><b>3,270</b> m peak</span>
+      </div>
+      <p class="z-intro">
+        Under the Matterhorn with good people and very good food. Fondue, raclette,
+        mountain coffee and far too much chocolate between the runs.
+      </p>
+    </header>
+
+    <!-- Gallery: photos + videos -->
+    <div class="z-gallery" id="zGallery"></div>
+
+    <!-- Location map -->
+    <section class="z-mapsection">
+      <h2 class="z-maptitle">Where it is</h2>
+      <div id="zermattMap" class="z-map"></div>
+    </section>
+
+    <footer class="z-footer">
+      Shot on the mountain · <a href="index.html">back to portfolio</a>
+    </footer>
+  </div>
+
+  <!-- Lightbox -->
+  <div class="z-lb" id="zLb">
+    <button class="z-lb-close" id="zLbClose" aria-label="Close">✕</button>
+    <img src="" alt="" id="zLbImg" />
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="js/zermatt.js?v=2"></script>
+</body>
+</html>
