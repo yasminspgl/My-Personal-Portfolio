@@ -263,18 +263,12 @@
       </article>
 
       <article class="card" data-status="ongoing">
-        <a class="card__media card__media--demo card__media--site" href="zermatt.html" target="_blank" rel="noopener" aria-label="Explore this website">
-          <div class="cardslides" id="siteSlides">
-            <span class="cardslide__cap"></span>
-            <iframe class="cardslide is-on" src="zermatt.html" data-cap="Trip galleries" title="Trip gallery" tabindex="-1" aria-hidden="true"></iframe>
-            <iframe class="cardslide" data-src="projects/myshop/index.html" data-cap="Live demos" title="Live demo" tabindex="-1" aria-hidden="true"></iframe>
-          </div>
-        </a>
+        <div class="card__media" style="--tint:#d9cfe6"></div>
         <div class="card__body">
           <span class="tag tag--ongoing">Ongoing</span>
           <h3 class="card__title">This Website</h3>
-          <p class="card__desc">The site you're on, built with a mix of hard coding and AI using plain HTML, CSS and JavaScript (no framework). It has an interactive Leaflet world map of my travels, standalone trip galleries, and a kinetic, minimalist feed. Probably a forever ongoing project.</p>
-          <ul class="card__meta"><li>HTML / CSS / JS</li><li>Leaflet</li><li>Design + build</li></ul>
+          <p class="card__desc">The site you're on, built with a mix of hard coding and AI using plain HTML, CSS and JavaScript (no framework). It has an interactive globe of my travels, a kinetic scroll-revealed feed, and a light/dark theme. Probably a forever ongoing project.</p>
+          <ul class="card__meta"><li>HTML / CSS / JS</li><li>D3 globe</li><li>Design + build</li></ul>
         </div>
       </article>
 
@@ -703,7 +697,6 @@
     <p class="slopes__fn">* clocked back when I was young and stupid.</p>
     <p class="slopes__note">
       Home resorts: Val&nbsp;Gardena · Zermatt · Mayrhofen · Bansko · Chamonix · Dorukkaya · Kitzbühel · Cortina · Kayseri · Erzurum · Uludağ · Brașov.
-      <br /><a href="zermatt.html" class="btn btn--ghost btn--sm" style="margin-top:1rem">See the Zermatt trip ↗</a>
     </p>
   </section>
 
@@ -713,12 +706,6 @@
       <div class="scrollgal__side">
         <h2 class="section__title">Gallery</h2>
         <p class="section__sub">Scroll through some moments from my trips.</p>
-        <div class="trip-chips">
-          <a href="zermatt.html">🇨🇭 Zermatt</a>
-          <a href="trip.html?t=verbier">🇨🇭 Verbier</a>
-          <a href="trip.html?t=bansko">🇧🇬 Bansko</a>
-          <a href="trip.html?t=valgardena">🇮🇹 Val Gardena</a>
-        </div>
       </div>
       <div class="scrollgal__stream">
         <figure class="scrollgal__shot"><img src="assets/zermatt/zermatt-02.jpg" alt="Zermatt, Switzerland" loading="lazy" /><figcaption>Zermatt · the Matterhorn</figcaption></figure>
@@ -859,7 +846,7 @@
   <div id="gtip" class="gtip"></div>
 
   <!-- Scripts -->
-  <script src="js/main.js?v=11"></script>
+  <script src="js/main.js?v=12"></script>
   <script src="js/feed.js?v=1"></script>
   <script src="js/hobbies.js?v=7"></script>
 </body>

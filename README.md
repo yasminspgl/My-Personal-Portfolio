@@ -1,29 +1,23 @@
 # Yasmin Sapoglu — Portfolio
 
 A static, design-forward personal portfolio. No build step and no dependencies to install —
-open `index.html` in a browser and it works. It's a single page (with a couple of standalone
-trip pages) covering About, CV, Projects, Travels, Skills, Volunteering, Writing, the Slopes
-stats, a photo Gallery, and Hobbies.
+open `index.html` in a browser and it works. It's a single page covering About, CV, Projects,
+Travels, Skills, Volunteering, Writing, the Slopes stats, a photo Gallery, and Hobbies.
 
 ## Structure
 ```
 portfolio/
 ├─ index.html          ← the whole single-page site (all sections)
-├─ zermatt.html        ← standalone Zermatt trip page
-├─ trip.html           ← reusable trip page (trip.html?t=<slug>)
 ├─ css/
 │  ├─ style.css        ← core design: colors, fonts, layout, cards
 │  ├─ feed.css         ← kinetic hero/story/feed + the Gallery masonry
-│  ├─ globe.css        ← the interactive Travels globe
-│  └─ zermatt.css      ← the Zermatt/trip pages
+│  └─ globe.css        ← the interactive Travels globe
 ├─ js/
 │  ├─ main.js          ← theme toggle, filters, lightbox, scroll/anchor logic
 │  ├─ feed.js          ← scroll-reveal for the story/feed
 │  ├─ hobbies.js       ← builds the hobby galleries + "Load more"
 │  ├─ globe.js         ← the D3 orthographic Travels globe (city lights + flight arcs)
-│  ├─ places.js        ← every place plotted on the globe — edit freely
-│  ├─ trips.js         ← config for the reusable trip.html pages
-│  └─ zermatt.js       ← media list for zermatt.html
+│  └─ places.js        ← every place plotted on the globe — edit freely
 ├─ assets/             ← all images/videos used by the site
 ├─ projects/           ← project decks (PDFs) + the MyShop source zip
 ├─ writing/            ← dissertation, presentation and report PDFs
@@ -45,11 +39,9 @@ portfolio/
    `assets/hobbies/<hobby>/` and are wired up in `js/hobbies.js`.
 5. **Contact / social** — update the LinkedIn link in the Contact section of `index.html`.
 
-## Trip pages
-Zermatt has its own bespoke page (`zermatt.html`), with its media listed in `ZERMATT_MEDIA`
-(`js/zermatt.js`). The other trips share one reusable page, `trip.html?t=<slug>`, driven by
-`TRIPS` in `js/trips.js`. To add a trip: drop resized photos in `assets/trips/<slug>/` named
-`<slug>-01.jpg`…, add an entry to `TRIPS`, and add a chip in the Gallery section of `index.html`.
+## Gallery photos
+The Gallery is a masonry of trip photos in the `.scrollgal__stream` block of `index.html`, drawn
+from `assets/`. To add one, drop a resized image in `assets/` and add a `<figure class="scrollgal__shot">`.
 
 > Media note: originals were HEIC photos / HEVC videos. Photos were converted to JPG and videos
 > transcoded to 720p H.264 MP4 so they play everywhere:

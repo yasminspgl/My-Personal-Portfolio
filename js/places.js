@@ -5,10 +5,10 @@
    ============================================================ */
 const PLACES = [
   // ---- Skiing ----
-  { name: "Val Gardena", country: "Italy",       cat: "ski", lat: 46.556, lng: 11.678, note: "Dolomites", gallery: "trip.html?t=valgardena" },
-  { name: "Zermatt",     country: "Switzerland", cat: "ski", lat: 46.020, lng: 7.749,  note: "Matterhorn", gallery: "zermatt.html" },
+  { name: "Val Gardena", country: "Italy",       cat: "ski", lat: 46.556, lng: 11.678, note: "Dolomites" },
+  { name: "Zermatt",     country: "Switzerland", cat: "ski", lat: 46.020, lng: 7.749,  note: "Matterhorn" },
   { name: "Mayrhofen",   country: "Austria",     cat: "ski", lat: 47.163, lng: 11.868, note: "Zillertal" },
-  { name: "Bansko",      country: "Bulgaria",    cat: "ski", lat: 41.838, lng: 23.488, note: "Pirin", gallery: "trip.html?t=bansko" },
+  { name: "Bansko",      country: "Bulgaria",    cat: "ski", lat: 41.838, lng: 23.488, note: "Pirin" },
 
   // ---- Travel ----
   { name: "Bali",           country: "Indonesia",   cat: "travel", lat: -8.340, lng: 115.092 },
@@ -22,7 +22,7 @@ const PLACES = [
   { name: "Amalfi Coast",   country: "Italy",       cat: "travel", lat: 40.634, lng: 14.602 },
   { name: "Capri",          country: "Italy",       cat: "travel", lat: 40.551, lng: 14.242 },
   { name: "Rome",           country: "Italy",       cat: "travel", lat: 41.903, lng: 12.496 },
-  { name: "Verbier",        country: "Switzerland", cat: "travel", lat: 46.096, lng: 7.228, gallery: "trip.html?t=verbier" },
+  { name: "Verbier",        country: "Switzerland", cat: "travel", lat: 46.096, lng: 7.228 },
   { name: "Zurich",         country: "Switzerland", cat: "travel", lat: 47.377, lng: 8.542 },
   { name: "Geneva",         country: "Switzerland", cat: "travel", lat: 46.204, lng: 6.143 },
   { name: "Paris",          country: "France",      cat: "travel", lat: 48.857, lng: 2.352 },

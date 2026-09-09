@@ -166,7 +166,7 @@ const GALLERY_IMAGES = [
     try {
       if (typeof d3 === "undefined") await loadScript("https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js");
       if (typeof topojson === "undefined") await loadScript("https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js");
-      if (typeof PLACES === "undefined") await loadScript("js/places.js?v=4");
+      if (typeof PLACES === "undefined") await loadScript("js/places.js?v=5");
       if (typeof renderGlobe === "undefined") await loadScript("js/globe.js?v=10");
       else renderGlobe();
     } catch (e) {
