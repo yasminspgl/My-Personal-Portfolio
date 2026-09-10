@@ -1,0 +1,70 @@
+/* ============================================================
+   Feed / kinetic homepage layer
+   Minimalist, oversized type, marquee tickers, scroll reveals.
+   Loads on top of style.css tokens.
+   ============================================================ */
+
+/* ---- Kinetic hero ---- */
+.hero2 { min-height: 92svh; display: flex; flex-direction: column; justify-content: center; padding: 7rem clamp(1rem, 5vw, 3rem) 2rem; max-width: 1400px; margin: 0 auto; }
+.bigname { font-family: "Fraunces", serif; font-weight: 400; line-height: .82; letter-spacing: -.03em; text-transform: uppercase; }
+.bigname span { display: block; font-size: clamp(3.5rem, 17vw, 15rem); }
+.bigname span:nth-child(2) { text-indent: clamp(1rem, 8vw, 8rem); color: var(--accent); }
+.hero2__sub { margin-top: 2rem; max-width: 40ch; font-size: clamp(1.05rem, 2vw, 1.35rem); color: var(--ink-soft); line-height: 1.5; }
+.hero2__cues { margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap; }
+
+/* ---- Marquee ticker ---- */
+.marquee { overflow: hidden; border-block: 1px solid var(--ink); padding: .55rem 0; white-space: nowrap; background: var(--ink); color: var(--bg); }
+.marquee__track { display: inline-flex; gap: 2.5rem; padding-left: 2.5rem; animation: marquee 32s linear infinite; will-change: transform; }
+.marquee__track span { font-family: "Fraunces", serif; font-size: clamp(1rem, 2.4vw, 1.7rem); letter-spacing: .02em; text-transform: uppercase; }
+.marquee--reverse .marquee__track { animation-direction: reverse; }
+.marquee:hover .marquee__track { animation-play-state: paused; }
+@keyframes marquee { to { transform: translateX(-50%); } }
+
+/* ---- Story scroll (big kinetic statements) ---- */
+.story { max-width: 1100px; margin: 0 auto; padding: clamp(5rem, 12vw, 10rem) clamp(1rem, 5vw, 3rem); display: flex; flex-direction: column; gap: clamp(2rem, 5vw, 4rem); }
+.story__line { font-family: "Fraunces", serif; font-weight: 400; font-size: clamp(1.8rem, 5.5vw, 4rem); line-height: 1.05; letter-spacing: -.02em; color: var(--ink); }
+/* Per-line sizes: h1 biggest, h3 smallest */
+.story__line--h1 { font-size: clamp(2.8rem, 9vw, 6.5rem); line-height: .98; }
+.story__line--h2 { font-size: clamp(1.8rem, 5.5vw, 4rem); }
+.story__line--h3 { font-size: clamp(1.3rem, 3.4vw, 2.1rem); color: var(--ink-soft); }
+.story__line em { font-style: normal; color: var(--accent); }
+.story__line .muted { color: var(--ink-soft); }
+
+/* ---- Highlights feed (quick-scan cards) ---- */
+.feed { max-width: 1200px; margin: 0 auto; padding: 0 clamp(1rem, 5vw, 3rem) clamp(3rem, 8vw, 6rem); }
+.feed__label { text-transform: uppercase; letter-spacing: .25em; font-size: .72rem; color: var(--ink-soft); margin-bottom: 1.5rem; }
+.feed__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.feed__item { background: var(--bg-elev); padding: clamp(1.4rem, 3vw, 2.2rem); min-height: 190px; display: flex; flex-direction: column; justify-content: space-between; text-decoration: none; color: var(--ink); transition: background .25s; position: relative; }
+.feed__item:hover { background: color-mix(in srgb, var(--accent) 10%, var(--bg-elev)); }
+.feed__k { font-family: "Fraunces", serif; font-size: clamp(2rem, 4vw, 3rem); line-height: 1; letter-spacing: -.02em; }
+.feed__t { font-size: 1.05rem; font-weight: 600; margin-top: auto; display: flex; align-items: center; justify-content: space-between; }
+.feed__t .arrow { color: var(--accent); transition: transform .25s; }
+.feed__item:hover .arrow { transform: translate(4px, -4px); }
+.feed__d { font-size: .9rem; color: var(--ink-soft); margin-top: .4rem; }
+@media (max-width: 860px) { .feed__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .feed__grid { grid-template-columns: 1fr; } }
+
+/* ---- Scroll-through gallery (sticky title, photos scroll past) ---- */
+.scrollgal { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: start; }
+.scrollgal__side { position: sticky; top: 100px; align-self: start; }
+.scrollgal__side .section__title { margin-bottom: .6rem; }
+.scrollgal__side .section__sub { margin-bottom: 1.4rem; }
+/* Smaller travel pictures: a compact 2-column masonry stream */
+.scrollgal__stream { column-count: 2; column-gap: clamp(.7rem, 1.6vw, 1.2rem); }
+.scrollgal__shot { border-radius: 12px; overflow: hidden; background: var(--line); box-shadow: var(--shadow); break-inside: avoid; margin-bottom: clamp(.7rem, 1.6vw, 1.2rem); }
+.scrollgal__shot img { width: 100%; display: block; transition: transform 1s cubic-bezier(.2,.7,.2,1); }
+.scrollgal__shot:hover img { transform: scale(1.04); }
+.scrollgal__shot figcaption { font-size: .76rem; color: var(--ink-soft); padding: .45rem .7rem .6rem; background: var(--bg-elev); }
+@media (max-width: 760px) {
+  .scrollgal { grid-template-columns: 1fr; }
+  .scrollgal__side { position: static; }
+  .scrollgal__stream { column-count: 2; }
+}
+
+/* ---- Scroll reveal ---- */
+.rise { opacity: 0; transform: translateY(30px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); }
+.rise.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .rise { opacity: 1; transform: none; transition: none; }
+  .marquee__track { animation: none; }
+}

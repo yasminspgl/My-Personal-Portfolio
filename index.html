@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yasmin Sapoglu — Portfolio</title>
+  <meta name="description" content="Portfolio of Yasmin Sapoglu — tech, photography, projects, and travels." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+
+  <link rel="stylesheet" href="css/style.css?v=18" />
+  <link rel="stylesheet" href="css/feed.css?v=4" />
+  <link rel="stylesheet" href="css/globe.css?v=4" />
+</head>
+<body>
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__brand">Yasmin&nbsp;Sapoglu</a>
+    <nav class="nav__links">
+      <a href="#about">About</a>
+      <a href="#experience">CV</a>
+      <a href="#projects">Projects</a>
+      <a href="#travels">Travels</a>
+      <a href="#skills">Skills</a>
+      <a href="#volunteering">Volunteering</a>
+      <a href="#writing">Writing</a>
+      <a href="#slopes">Slopes</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#hobbies">Hobbies</a>
+      <a href="#contact" class="nav__cta">Contact</a>
+    </nav>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle theme">◐</button>
+  </header>
+
+  <!-- ===== KINETIC HERO ===== -->
+  <section class="hero2" id="top">
+    <h1 class="bigname"><span>Yasmin</span><span>Sapoglu</span></h1>
+    <p class="hero2__sub">Tech enthusiast and business analyst — a camera in one hand, a passport in the other. Scroll for the highlights.</p>
+    <div class="hero2__cues">
+      <a href="#projects" class="btn btn--primary">See my work</a>
+      <a href="cv/YasminSapoglu-CV.pdf" class="btn btn--ghost" target="_blank" rel="noopener">View CV</a>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Tech Enthusiast ✦</span><span>Business Analyst ✦</span><span>Data &amp; Analytics ✦</span><span>Photographer ✦</span><span>Foodie ✦</span><span>Skier ✦</span><span>26 Countries ✦</span>
+      <span>Tech Enthusiast ✦</span><span>Business Analyst ✦</span><span>Data &amp; Analytics ✦</span><span>Photographer ✦</span><span>Foodie ✦</span><span>Skier ✦</span><span>26 Countries ✦</span>
+    </div>
+  </div>
+
+  <!-- ===== STORY (kinetic feed) ===== -->
+  <section class="story">
+    <p class="story__line story__line--h1 rise">Hi, I'm Yasmin — I <em>build</em>, <em>analyse</em>, and <em>explore</em>.</p>
+    <p class="story__line story__line--h2 rise">I studied <em>IT Management for Business</em> at Manchester, <span class="muted">graduating in 2025.</span></p>
+    <p class="story__line story__line--h2 rise">Then a placement year as a <em>Business Analyst</em> in London.</p>
+    <p class="story__line story__line--h1 rise">Next up: an <em>MSc in Business Analytics</em> at UCL.</p>
+    <p class="story__line story__line--h2 rise">Along the way I've travelled <em>26 countries</em> and skied <em>9 resorts</em>.</p>
+    <p class="story__line story__line--h2 rise">I build things - an <em>AI receptionist</em> and a <em>mobile shop</em>.</p>
+    <p class="story__line story__line--h3 rise">And I give back — <em>teaching in Nepal</em>, charity and community work.</p>
+  </section>
+
+  <div class="marquee marquee--reverse" aria-hidden="true">
+    <div class="marquee__track">
+      <span>Projects ✦</span><span>Travels ✦</span><span>Photography ✦</span><span>Writing ✦</span><span>Volunteering ✦</span><span>Skills ✦</span>
+      <span>Projects ✦</span><span>Travels ✦</span><span>Photography ✦</span><span>Writing ✦</span><span>Volunteering ✦</span><span>Skills ✦</span>
+    </div>
+  </div>
+
+  <!-- ===== HIGHLIGHTS FEED ===== -->
+  <section class="feed">
+    <p class="feed__label rise">A quick tour →</p>
+    <div class="feed__grid">
+      <a class="feed__item rise" href="#experience">
+        <span class="feed__k">CV</span>
+        <span><span class="feed__d">Analyst · intern · degree</span><span class="feed__t">Experience <span class="arrow">↗</span></span></span>
+      </a>
+      <a class="feed__item rise" href="#projects">
+        <span class="feed__k">3+</span>
+        <span><span class="feed__d">Vera AI, MyShop &amp; more</span><span class="feed__t">Projects <span class="arrow">↗</span></span></span>
+      </a>
+      <a class="feed__item rise" href="#travels">
+        <span class="feed__k">26</span>
+        <span><span class="feed__d">More than a hobby · 88 cities</span><span class="feed__t">Travels <span class="arrow">↗</span></span></span>
+      </a>
+      <a class="feed__item rise" href="#volunteering">
+        <span class="feed__k">6</span>
+        <span><span class="feed__d">Nepal, BHF, community</span><span class="feed__t">Volunteering <span class="arrow">↗</span></span></span>
+      </a>
+      <a class="feed__item rise" href="#writing">
+        <span class="feed__k">5</span>
+        <span><span class="feed__d">Dissertation, articles &amp; reports</span><span class="feed__t">Writing <span class="arrow">↗</span></span></span>
+      </a>
+      <a class="feed__item rise" href="#gallery">
+        <span class="feed__k">4</span>
+        <span><span class="feed__d">Zermatt, Verbier &amp; more</span><span class="feed__t">Photo trips <span class="arrow">↗</span></span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="section__head">
+      <h2 class="section__title">About Me</h2>
+    </div>
+    <p class="about__bio">
+      I'm Yasmin, a tech enthusiast who grew up between Istanbul and the UK with entrepreneur
+      parents. I studied Information Technology Management for Business at the University of
+      Manchester, spent a placement year as a business analyst in London, and I'm heading to UCL
+      for an MSc in Business Analytics. Along the way I've been lucky enough to travel, ski, and
+      eat my way across 26 countries. Here's where life has taken me so far.
+    </p>
+    <div class="timeline about__timeline">
+      <div class="tl__item">
+        <div class="tl__date">2003 — 2021</div>
+        <div class="tl__body">
+          <h3>Istanbul, Türkiye 🇹🇷</h3>
+          <p class="tl__org">Where it started</p>
+          <p>Born and raised — I earned my International Baccalaureate Diploma at Terakki Foundation Schools, where I led and took part in a range of volunteer projects.</p>
+        </div>
+      </div>
+      <div class="tl__item">
+        <div class="tl__date">2021 — 2023</div>
+        <div class="tl__body">
+          <h3>Manchester, UK 🇬🇧</h3>
+          <p class="tl__org">University of Manchester</p>
+          <p>Starting my BSc in Information Technology Management for Business.</p>
+        </div>
+      </div>
+      <div class="tl__item">
+        <div class="tl__date">2023 — 2024</div>
+        <div class="tl__body">
+          <h3>London, UK 🇬🇧</h3>
+          <p class="tl__org">Placement year</p>
+          <p>A year in the city as a Junior Business Analyst at Howard Kennedy LLP.</p>
+        </div>
+      </div>
+      <div class="tl__item">
+        <div class="tl__date">2024 — 2025</div>
+        <div class="tl__body">
+          <h3>Manchester, UK 🇬🇧</h3>
+          <p class="tl__org">Final year · University of Manchester</p>
+          <p>Back at UoM to finish my BSc Information Technology Management for Business.</p>
+        </div>
+      </div>
+      <div class="tl__item">
+        <div class="tl__date">2025 — 2026</div>
+        <div class="tl__body">
+          <h3>Istanbul, Türkiye 🇹🇷</h3>
+          <p class="tl__org">Home again</p>
+          <p>Back where it began, between projects and travels.</p>
+        </div>
+      </div>
+      <div class="tl__item">
+        <div class="tl__date">2026 — 2027</div>
+        <div class="tl__body">
+          <h3>London, UK 🇬🇧</h3>
+          <p class="tl__org">MSc Business Analytics · UCL</p>
+          <p>Starting my master's at UCL, while exploring part-time roles alongside my studies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE / CV ===== -->
+  <section class="section" id="experience">
+    <div class="section__head">
+      <h2 class="section__title">Experience</h2>
+      <a href="cv/YasminSapoglu-CV.pdf" class="btn btn--ghost btn--sm" target="_blank" rel="noopener">View full CV</a>
+    </div>
+    <div class="timeline">
+      <div class="tl__item">
+        <div class="tl__date">2026 — 2027</div>
+        <div class="tl__body">
+          <h3>MSc Business Analytics</h3>
+          <p class="tl__org">University College London (UCL)</p>
+          <p>Postgraduate study in business analytics, starting September 2026.</p>
+        </div>
+      </div>
+      <div class="tl__item">
+        <div class="tl__date">Jul 2023 — Jul 2024</div>
+        <div class="tl__body">
+          <h3>Junior Business Analyst</h3>
+          <p class="tl__org">Howard Kennedy LLP · London</p>
+          <p>Worked with stakeholders across the firm to analyse and improve business processes, built business cases, and kept IT deliverables aligned with business needs in a legal environment.</p>
+        </div>
+      </div>
+      <div class="tl__item">
+        <div class="tl__date">Sep 2022 — Jun 2023</div>
+        <div class="tl__body">
+          <h3>Student Ambassador</h3>
+          <p class="tl__org">University of Manchester</p>
+          <p>Led campus tours, wrote blog posts about student life, and supported prospective students with their questions about the university.</p>
+        </div>
+      </div>
+      <div class="tl__item">
+        <div class="tl__date">Aug 2022</div>
+        <div class="tl__body">
+          <h3>Business Analyst Intern</h3>
+          <p class="tl__org">Şişecam · Istanbul</p>
+          <p>Analysed global factory-output data to support product and brand management, and presented a proposal on ATP software with a market analysis of the US glass market.</p>
+        </div>
+      </div>
+      <div class="tl__item">
+        <div class="tl__date">Jul 2019</div>
+        <div class="tl__body">
+          <h3>Technical Support Intern</h3>
+          <p class="tl__org">Chip Computer Ltd. · Istanbul</p>
+          <p>Provided technical support and IT solutions to clients while advising on software development and marketing strategies, and translated documents from English to Turkish to help resolve software issues.</p>
+        </div>
+      </div>
+      <div class="tl__item">
+        <div class="tl__date">Jun 2019</div>
+        <div class="tl__body">
+          <h3>Marketing Intern</h3>
+          <p class="tl__org">Cordamed Biomedical</p>
+          <p>Supported the Marketing and Administrative department, developing strategies to improve long-term client retention and loyalty.</p>
+        </div>
+      </div>
+      <div class="tl__item">
+        <div class="tl__date">2021 — 2025</div>
+        <div class="tl__body">
+          <h3>BSc Information Technology Management for Business</h3>
+          <p class="tl__org">University of Manchester</p>
+          <p>2nd place in the ITMB Final Showcase for a group project building an app for wealth managers at Credit Suisse.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section" id="projects">
+    <div class="section__head">
+      <h2 class="section__title">Projects</h2>
+      <div class="filter" id="projectFilter">
+        <button class="filter__btn is-active" data-filter="all">All</button>
+        <button class="filter__btn" data-filter="ongoing">Ongoing</button>
+        <button class="filter__btn" data-filter="completed">Completed</button>
+      </div>
+    </div>
+
+    <div class="cards" id="projectGrid">
+      <!-- Ongoing -->
+      <article class="card" data-status="ongoing">
+        <div class="card__media card__media--icon" style="--tint:#e8d8c4">
+          <svg viewBox="0 0 200 200" role="img" aria-label="Vera — always-on automated process">
+            <path class="ci-line" d="M72 177.1 A82 82 0 1 1 111.4 181.2" />
+            <path class="ci-line" d="M123.8 169.6 L111.4 181.2 L126.5 188.9" />
+            <path class="ci-line" d="M142.7 89.4 L157.3 90.9 L157.3 109.1 L142.7 110.6 L137.7 122.7 L146.9 134.1 L134.1 146.9 L122.7 137.7 L110.6 142.7 L109.1 157.3 L90.9 157.3 L89.4 142.7 L77.3 137.7 L65.9 146.9 L53.1 134.1 L62.3 122.7 L57.3 110.6 L42.7 109.1 L42.7 90.9 L57.3 89.4 L62.3 77.3 L53.1 65.9 L65.9 53.1 L77.3 62.3 L89.4 57.3 L90.9 42.7 L109.1 42.7 L110.6 57.3 L122.7 62.3 L134.1 53.1 L146.9 65.9 L137.7 77.3 Z" />
+            <circle class="ci-line" cx="100" cy="100" r="18" />
+          </svg>
+        </div>
+        <div class="card__body">
+          <span class="tag tag--ongoing">Ongoing</span>
+          <h3 class="card__title">Vera — AI Receptionist</h3>
+          <p class="card__desc">A self-hosted Turkish AI receptionist. Voice-driven record-and-respond system.</p>
+          <ul class="card__meta"><li>Product design</li><li>Voice UX</li></ul>
+        </div>
+      </article>
+
+      <article class="card" data-status="ongoing">
+        <a class="card__media card__media--top" href="#top" style="--tint:#d9cfe6" aria-label="Back to the top of the page"><span>Back to top ↑</span></a>
+        <div class="card__body">
+          <span class="tag tag--ongoing">Ongoing</span>
+          <h3 class="card__title">This Website</h3>
+          <p class="card__desc">The site you're on, built with a mix of hard coding and AI using plain HTML, CSS and JavaScript (no framework). It has an interactive globe of my travels, a kinetic scroll-revealed feed, and a light/dark theme. Probably a forever ongoing project.</p>
+          <ul class="card__meta"><li>HTML / CSS / JS</li><li>D3 globe</li><li>Design + build</li></ul>
+        </div>
+      </article>
+
+      <!-- Completed -->
+      <article class="card" data-status="completed">
+        <a class="card__media card__media--demo" href="projects/myshop/index.html" target="_blank" rel="noopener" aria-label="Launch the MyShop demo">
+          <iframe src="projects/myshop/index.html" title="MyShop demo preview" loading="lazy" tabindex="-1" aria-hidden="true"></iframe>
+        </a>
+        <div class="card__body">
+          <span class="tag tag--done">Completed</span>
+          <h3 class="card__title">MyShop — Mobile Shopping App</h3>
+          <p class="card__desc">A cross-platform retail app built in Xamarin.Forms (C#/.NET): a full storefront with home, category pages (clothing, beauty, furniture, home décor), product listings and a shopping basket. University project, BMAN11000.</p>
+          <ul class="card__meta"><li>Xamarin.Forms</li><li>C# / .NET</li><li>University</li></ul>
+
+          <details class="scale-note">
+            <summary>How I'd scale this</summary>
+            <p>Right now the product list is written straight into the app. To make it ready for real use, I'd split it into three parts:</p>
+            <ul>
+              <li>a front end for the screens people see,</li>
+              <li>an API in the middle,</li>
+              <li>and a database that stores the products and orders.</li>
+            </ul>
+            <p>Then the catalogue and basket come from the database instead of being fixed in the code, so items can be added or updated without changing the app itself.</p>
+          </details>
+
+          <p style="margin-top:1.1rem">
+            <a class="btn btn--primary btn--sm" href="projects/myshop/index.html" target="_blank" rel="noopener">Launch demo →</a>
+            <a class="src-link" href="projects/MyShop-Xamarin-Solution.zip" download>source</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="card" data-status="completed">
+        <div class="card__media card__brand card__brand--credx" aria-hidden="true">
+          <span class="brandmark">CRED<i>X</i></span>
+          <span class="brandsub">A Relationship Manager's Best Friend</span>
+        </div>
+        <div class="card__body">
+          <span class="tag tag--done">Completed</span>
+          <h3 class="card__title">CredX — Credit Suisse App</h3>
+          <p class="card__desc">A mobile app concept for Credit Suisse relationship managers — a secure client dashboard with RM login and Face ID, designed to be a wealth manager's everyday companion. My ITMB final-year group project, which placed 2nd in the ITMB Final Showcase.</p>
+          <ul class="card__meta"><li>Mobile UX</li><li>FinTech</li><li>University</li></ul>
+          <p style="margin-top:1.1rem"><a class="btn btn--primary btn--sm" href="projects/CredX.pdf" target="_blank" rel="noopener">Open deck →</a></p>
+        </div>
+      </article>
+
+      <article class="card" data-status="completed">
+        <a class="card__media card__media--img card__media--wide" href="projects/Bank of America.pdf" target="_blank" rel="noopener" aria-label="Open the Bank of America deck">
+          <img src="assets/projects/boa.jpg" alt="Bank of America — Cloud Adoption Business Case" loading="lazy" />
+        </a>
+        <div class="card__body">
+          <span class="tag tag--done">Completed</span>
+          <h3 class="card__title">Bank of America</h3>
+          <p class="card__desc">A cloud-adoption business case for Bank of America — making the strategic and financial argument for moving core services to the cloud, with the trade-offs, risks and expected return laid out for decision-makers.</p>
+          <ul class="card__meta"><li>Business case</li><li>Cloud strategy</li><li>Cybersecurity</li><li>Finance</li><li>Consulting</li></ul>
+          <p style="margin-top:1.1rem"><a class="btn btn--primary btn--sm" href="projects/Bank of America.pdf" target="_blank" rel="noopener">Open deck →</a></p>
+        </div>
+      </article>
+
+      <article class="card" data-status="completed">
+        <a class="card__media card__media--img card__media--wide" href="projects/PAMPERS SLIDES.pdf" target="_blank" rel="noopener" aria-label="Open the P&amp;G Pampers deck">
+          <img src="assets/projects/pampers.jpg" alt="P&amp;G Pampers brand project" loading="lazy" />
+        </a>
+        <div class="card__body">
+          <span class="tag tag--done">Completed</span>
+          <h3 class="card__title">P&amp;G — Pampers</h3>
+          <p class="card__desc">A brand and marketing project for P&amp;G's Pampers, delivered through the P&amp;G Touchpoint programme — audience insight, positioning and a go-to-market pitch for the brand.</p>
+          <ul class="card__meta"><li>Brand strategy</li><li>Marketing</li><li>Supply chain</li><li>Change management</li><li>P&amp;G Touchpoint</li></ul>
+          <p style="margin-top:1.1rem">
+            <a class="btn btn--primary btn--sm" href="projects/PAMPERS SLIDES.pdf" target="_blank" rel="noopener">Open deck →</a>
+            <a class="src-link" href="projects/P&amp;G Touchpoint Presentation Showcase 1 Team 1.pdf" target="_blank" rel="noopener">showcase</a>
+          </p>
+        </div>
+      </article>
+
+      <article class="card" data-status="completed">
+        <a class="card__media card__media--img card__media--wide" href="projects/FORD PRESENTATION.pdf" target="_blank" rel="noopener" aria-label="Open the Ford deck">
+          <img src="assets/projects/ford.jpg" alt="Ford strategy presentation" loading="lazy" />
+        </a>
+        <div class="card__body">
+          <span class="tag tag--done">Completed</span>
+          <h3 class="card__title">Ford</h3>
+          <p class="card__desc">A strategy and innovation pitch for Ford — reading where the market is heading and recommending how the business should respond, presented as a full deck.</p>
+          <ul class="card__meta"><li>Strategy</li><li>Presentation</li><li>Consulting</li></ul>
+          <p style="margin-top:1.1rem"><a class="btn btn--primary btn--sm" href="projects/FORD PRESENTATION.pdf" target="_blank" rel="noopener">Open deck →</a></p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== TRAVELS ===== -->
+  <section class="section" id="travels">
+    <div class="section__head">
+      <h2 class="section__title">Travels</h2>
+      <p class="section__sub">More than a hobby.</p>
+    </div>
+    <div class="stats stats--map">
+      <div class="stat"><span class="stat__num stat__num--travel">26</span><span class="stat__label">countries</span></div>
+      <div class="stat"><span class="stat__num stat__num--travel">88</span><span class="stat__label">cities</span></div>
+      <div class="stat"><span class="stat__num stat__num--travel">9</span><span class="stat__label">ski resorts</span></div>
+    </div>
+    <div class="hobbies-accordion" style="margin-top:1.6rem">
+      <details class="hobbyacc travelmap">
+        <summary>
+          <span class="hobbyacc__title">Interactive map</span>
+          <span class="hobbyacc__date">View</span>
+          <span class="hobbyacc__plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="hobbyacc__body">
+          <div id="globe" class="globe"></div>
+          <div class="glegend">
+            <span><span class="gdot" style="background:#ef7f2e"></span> Travel</span>
+            <span><span class="gdot" style="background:#eaf2ff"></span> Skiing</span>
+          </div>
+          <p class="ghint">City lights scale with population · drag to spin · dashed lines are flights</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <!-- Edit freely: adjust the chips to match your real toolkit and levels. -->
+  <section class="section" id="skills">
+    <div class="section__head">
+      <h2 class="section__title">Skills</h2>
+      <p class="section__sub">The toolkit I bring to a problem.</p>
+    </div>
+    <div class="skills">
+      <div class="skillcat">
+        <h3>Data &amp; Analytics</h3>
+        <ul>
+          <li>Exploratory data analysis</li>
+          <li>Statistics</li>
+          <li>Linear regression</li>
+          <li>Decision trees</li>
+          <li>Model comparison</li>
+          <li>Predictive modelling</li>
+          <li>Policy analysis</li>
+          <li>Clustering</li>
+          <li>Data visualisation</li>
+          <li>Tableau</li>
+          <li>Power BI</li>
+          <li>Excel</li>
+        </ul>
+      </div>
+      <div class="skillcat">
+        <h3>Business Analysis</h3>
+        <ul>
+          <li>Requirements gathering</li>
+          <li>As-is &amp; to-be modelling</li>
+          <li>BPMN</li>
+          <li>Data flow diagrams</li>
+          <li>Process improvement</li>
+          <li>Stakeholder engagement</li>
+          <li>Business cases</li>
+          <li>Strategy</li>
+          <li>Presentations</li>
+        </ul>
+      </div>
+      <div class="skillcat">
+        <h3>Programming</h3>
+        <ul>
+          <li>Python</li>
+          <li>C# / .NET</li>
+          <li>Xamarin.Forms</li>
+          <li>SQL</li>
+          <li>HTML &amp; CSS</li>
+        </ul>
+      </div>
+      <div class="skillcat">
+        <h3>Tools &amp; Methods</h3>
+        <ul>
+          <li>Power Automate</li>
+          <li>Lucidchart</li>
+          <li>Monday.com</li>
+          <li>Google Sheets</li>
+          <li>Office 365</li>
+          <li>Slack</li>
+          <li>Git</li>
+          <li>UML (Visual Paradigm)</li>
+          <li>LLMs &amp; prompt engineering</li>
+        </ul>
+      </div>
+      <div class="skillcat">
+        <h3>Languages</h3>
+        <ul>
+          <li>Turkish — native</li>
+          <li>English — C1</li>
+          <li>Spanish — B1</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VOLUNTEERING ===== -->
+  <section class="section" id="volunteering">
+    <div class="section__head">
+      <h2 class="section__title">Volunteering</h2>
+      <p class="section__sub">Giving back has been a constant — the work I'm proudest of.</p>
+    </div>
+    <div class="writing">
+
+      <article class="writing__item">
+        <div class="writing__meta">
+          <span class="writing__year">2025</span>
+          <span class="writing__kind">Heritage</span>
+        </div>
+        <div class="writing__body">
+          <h3 class="writing__title">Victoria Baths</h3>
+          <p class="writing__subtitle">Volunteer · Manchester</p>
+          <p class="writing__desc">
+            Volunteering at the historic Grade II* listed Victoria Baths — helping restore and clean
+            the property to get it ready for open days and events at one of Manchester's best-loved landmarks.
+          </p>
+        </div>
+      </article>
+
+      <article class="writing__item">
+        <div class="writing__meta">
+          <span class="writing__year">2023 — 2024</span>
+          <span class="writing__kind">Listening</span>
+        </div>
+        <div class="writing__body">
+          <h3 class="writing__title">Manchester Nightline</h3>
+          <p class="writing__subtitle">Listening volunteer</p>
+          <p class="writing__desc">
+            Trained in active listening and staffed confidential 12-hour shifts, offering a calm,
+            non-judgemental ear for students who needed someone to talk to.
+          </p>
+        </div>
+      </article>
+
+      <article class="writing__item">
+        <div class="writing__meta">
+          <span class="writing__year">2022</span>
+          <span class="writing__kind">Charity</span>
+        </div>
+        <div class="writing__body">
+          <h3 class="writing__title">British Heart Foundation</h3>
+          <p class="writing__subtitle">Charity shop volunteer · Manchester</p>
+          <p class="writing__desc">
+            Customer-facing shop assistance and online listing of donations. Helped raise
+            £1,500 as a group, and used marketing skills to run promotion across the
+            University's and the BHF's social media.
+          </p>
+        </div>
+      </article>
+
+      <article class="writing__item">
+        <div class="writing__meta">
+          <span class="writing__year">2020</span>
+          <span class="writing__kind">Project lead</span>
+        </div>
+        <div class="writing__body">
+          <h3 class="writing__title">Project "Nirvana"</h3>
+          <p class="writing__subtitle">Leader</p>
+          <p class="writing__desc">
+            Led a team producing a video to teach younger children about feminism —
+            putting together the idea, scenario and technical crews.
+          </p>
+        </div>
+      </article>
+
+      <article class="writing__item">
+        <div class="writing__meta">
+          <span class="writing__year">2020</span>
+          <span class="writing__kind">Project lead</span>
+        </div>
+        <div class="writing__body">
+          <h3 class="writing__title">TÜBİSAD — E-Waste Awareness</h3>
+          <p class="writing__subtitle">Project leader · Turkish Information Industry Association</p>
+          <p class="writing__desc">
+            Partnered with a company to collect electronic waste at school and raise awareness
+            of its environmental impact — gave presentations to classes and set up e-waste bins
+            around the school.
+          </p>
+        </div>
+      </article>
+
+      <article class="writing__item">
+        <div class="writing__meta">
+          <span class="writing__year">2018 — 2019</span>
+          <span class="writing__kind">Project lead</span>
+        </div>
+        <div class="writing__body">
+          <h3 class="writing__title">SupportED</h3>
+          <p class="writing__subtitle">Project leader</p>
+          <p class="writing__desc">
+            Supported education in rural areas of Istanbul — visited a school, discussed its
+            needs with the principal, and funded it through money the team raised.
+          </p>
+        </div>
+      </article>
+
+      <article class="writing__item">
+        <div class="writing__meta">
+          <span class="writing__year">2018 — 2019</span>
+          <span class="writing__kind">Fundraising</span>
+        </div>
+        <div class="writing__body">
+          <h3 class="writing__title">3F — Food for Fund</h3>
+          <p class="writing__subtitle">Organiser</p>
+          <p class="writing__desc">
+            Ran a healthier-snack fundraiser at school to fund the SupportED project, selling
+            cooked meals and managing each team's earnings and shifts.
+          </p>
+        </div>
+      </article>
+
+      <article class="writing__item">
+        <div class="writing__meta">
+          <span class="writing__year">2017 — 2018</span>
+          <span class="writing__kind">Teaching</span>
+        </div>
+        <div class="writing__body">
+          <h3 class="writing__title">Teaching in Nepal 🇳🇵</h3>
+          <p class="writing__subtitle">Nagarkot, Nepal</p>
+          <p class="writing__desc">
+            Travelled to Nagarkot to teach English and Maths to underprivileged children —
+            helped plan the curriculum in advance and collected donations to bring along.
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== WRITING ===== -->
+  <section class="section" id="writing">
+    <div class="section__head">
+      <h2 class="section__title">Writing &amp; Research</h2>
+      <p class="section__sub">Longer-form work — academic and personal.</p>
+    </div>
+    <div class="writing">
+
+      <article class="writing__item">
+        <div class="writing__meta">
+          <span class="writing__year">2025</span>
+          <span class="writing__kind">Dissertation</span>
+        </div>
+        <div class="writing__body">
+          <h3 class="writing__title">Design, Deployment, and Sustainability</h3>
+          <p class="writing__subtitle">A Grounded Theory Analysis of Energy Demand in Open- and Closed-Source Large Language Models</p>
+          <p class="writing__desc">
+            My final-year dissertation at Alliance Manchester Business School (ITMB). Using constructivist
+            grounded theory, it examines how the design and deployment of open-source models (LLaMA, DeepSeek)
+            versus closed-source models (ChatGPT, Claude) shape their energy demand and environmental impact —
+            and what transparency, standardisation, and governance can do about it.
+          </p>
+          <p class="writing__tags"><span>Grounded theory</span><span>Sustainable AI</span><span>LLMs</span><span>8,741 words</span></p>
+          <div class="writing__links">
+            <a href="writing/YasminSapoglu-Dissertation-LLM-Energy.pdf" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Read the paper (PDF)</a>
+            <a href="writing/YasminSapoglu-Dissertation-Presentation.pdf" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">View presentation</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="writing__item">
+        <div class="writing__meta">
+          <span class="writing__year">2025</span>
+          <span class="writing__kind">Article</span>
+        </div>
+        <div class="writing__body">
+          <h3 class="writing__title">Transformation by Design: Rebuilding Texas Instruments, 1985–1996</h3>
+          <p class="writing__subtitle">Strategic management essay · University of Manchester</p>
+          <p class="writing__desc">
+            Using Teece's dynamic-capabilities framework, this essay argues that Texas Instruments'
+            1985–1996 turnaround was driven by CEO Jerry Junkins' shift to a decentralised structure —
+            countering cognitive inertia, enabling contextual ambidexterity, and reshaping the firm's
+            identity — as its share price climbed from roughly $1 to $9.
+          </p>
+          <p class="writing__tags"><span>Dynamic capabilities</span><span>Organisational design</span><span>Strategic change</span><span>Case study</span></p>
+          <div class="writing__links">
+            <a href="writing/YasminSapoglu-TexasInstruments-Transformation.pdf" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Read the article (PDF)</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="writing__item">
+        <div class="writing__meta">
+          <span class="writing__year">2024</span>
+          <span class="writing__kind">Article</span>
+        </div>
+        <div class="writing__body">
+          <h3 class="writing__title">Blind Spots at the Top: Bounded Rationality &amp; Dominant Logic at Microsoft</h3>
+          <p class="writing__subtitle">Strategic management essay · University of Manchester</p>
+          <p class="writing__desc">
+            A dynamic-capabilities analysis of why Microsoft's sensing capability faltered in the 2000s
+            and early 2010s: the bounded rationality of its top team and an entrenched "Windows is god"
+            dominant logic filtered out mobile opportunities. It recommends a larger, more diverse top
+            team and structural differentiation to reframe threats as opportunities.
+          </p>
+          <p class="writing__tags"><span>Dynamic capabilities</span><span>Managerial cognition</span><span>Dominant logic</span><span>Case study</span></p>
+          <div class="writing__links">
+            <a href="writing/YasminSapoglu-Microsoft-DominantLogic.pdf" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Read the article (PDF)</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="writing__item">
+        <div class="writing__meta">
+          <span class="writing__year">2022</span>
+          <span class="writing__kind">Report</span>
+        </div>
+        <div class="writing__body">
+          <h3 class="writing__title">World Happiness Data Analysis and Result Modelling</h3>
+          <p class="writing__subtitle">BMAN24621 · University of Manchester</p>
+          <p class="writing__desc">
+            An end-to-end analysis of the World Happiness dataset — exploring what drives national
+            happiness and building models to explain and predict it. I fitted linear regression and
+            decision-tree models, compared them against each other on fit and interpretability, and
+            translated the findings into policy implications for governments. Graded 75/100.
+          </p>
+          <p class="writing__tags"><span>Linear regression</span><span>Decision trees</span><span>Model comparison</span><span>Policy analysis</span></p>
+          <div class="writing__links">
+            <a href="writing/YasminSapoglu-BusinessDataAnalytics.pdf" target="_blank" rel="noopener" class="btn btn--primary btn--sm">Read the report (PDF)</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="writing__item">
+        <div class="writing__meta">
+          <span class="writing__year">2022</span>
+          <span class="writing__kind">Blog</span>
+        </div>
+        <div class="writing__body">
+          <h3 class="writing__title">Why I Moved to Manchester</h3>
+          <p class="writing__subtitle">University of Manchester — Humanities Blog</p>
+          <p class="writing__desc">
+            A guest post for the University of Manchester on arriving from Turkey as an international
+            ITMB student during the pandemic, and how the student community, societies, and support
+            turned a new city into a sense of belonging.
+          </p>
+          <p class="writing__tags"><span>Student life</span><span>International</span><span>Guest post</span></p>
+          <div class="writing__links">
+            <a href="https://sites.manchester.ac.uk/humanities-blog/2022/11/14/yasmin-shares-why-she-moved-to-manchester/" target="_blank" rel="noopener" class="btn btn--ghost btn--sm">Read on manchester.ac.uk ↗</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== ON THE SLOPES ===== -->
+  <section class="section" id="slopes">
+    <div class="section__head">
+      <h2 class="section__title">On the Slopes</h2>
+      <p class="section__sub">Personal bests, tracked with Slopes on Apple&nbsp;Watch.</p>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <span class="stat__num">60<span class="stat__unit">mph</span><sup class="stat__fnmark">*</sup></span>
+        <span class="stat__label">Top speed</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num">4,200<span class="stat__unit">m</span></span>
+        <span class="stat__label">Highest altitude</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num">9,835<span class="stat__unit">m</span></span>
+        <span class="stat__label">Biggest vertical</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num">26<span class="stat__unit">km</span></span>
+        <span class="stat__label">Longest run · Val Gardena (Sella Ronda)</span>
+      </div>
+    </div>
+    <p class="slopes__fn">* clocked back when I was young and stupid.</p>
+    <p class="slopes__note">
+      Home resorts: Val&nbsp;Gardena · Zermatt · Mayrhofen · Bansko · Chamonix · Dorukkaya · Kitzbühel · Cortina · Kayseri · Erzurum · Uludağ · Brașov.
+    </p>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section class="section section--wide" id="gallery">
+    <div class="scrollgal">
+      <div class="scrollgal__side">
+        <h2 class="section__title">Gallery</h2>
+        <p class="section__sub">Scroll through some moments from my trips.</p>
+      </div>
+      <div class="scrollgal__stream">
+        <figure class="scrollgal__shot"><img src="assets/zermatt/zermatt-02.jpg" alt="Zermatt, Switzerland" loading="lazy" /><figcaption>Zermatt · the Matterhorn</figcaption></figure>
+        <figure class="scrollgal__shot"><img src="assets/zermatt/zermatt-06.jpg" alt="Zermatt slopes" loading="lazy" /><figcaption>Zermatt · on the slopes</figcaption></figure>
+        <figure class="scrollgal__shot"><img src="assets/trips/valgardena/valgardena-02.jpg" alt="Val Gardena, Dolomites" loading="lazy" /><figcaption>Val Gardena · Dolomites</figcaption></figure>
+        <figure class="scrollgal__shot"><img src="assets/zermatt/zermatt-04.jpg" alt="Zermatt" loading="lazy" /><figcaption>Zermatt · Switzerland</figcaption></figure>
+        <figure class="scrollgal__shot"><img src="assets/trips/verbier/verbier-01.jpg" alt="Verbier, Switzerland" loading="lazy" /><figcaption>Verbier · Les 4 Vallées</figcaption></figure>
+        <figure class="scrollgal__shot"><img src="assets/zermatt/zermatt-08.jpg" alt="Zermatt views" loading="lazy" /><figcaption>Zermatt · views</figcaption></figure>
+        <figure class="scrollgal__shot"><img src="assets/trips/bansko/bansko-02.jpg" alt="Bansko, Bulgaria" loading="lazy" /><figcaption>Bansko · Pirin mountains</figcaption></figure>
+        <figure class="scrollgal__shot"><img src="assets/trips/valgardena/valgardena-03.jpg" alt="Val Gardena" loading="lazy" /><figcaption>Val Gardena · Italy</figcaption></figure>
+        <figure class="scrollgal__shot"><img src="assets/zermatt/zermatt-07.jpg" alt="Zermatt" loading="lazy" /><figcaption>Zermatt · Switzerland</figcaption></figure>
+        <figure class="scrollgal__shot"><img src="assets/trips/verbier/verbier-05.jpg" alt="Verbier" loading="lazy" /><figcaption>Verbier · Switzerland</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOBBIES ===== -->
+  <section class="section section--wide" id="hobbies">
+    <div class="section__head">
+      <h2 class="section__title">Hobbies</h2>
+      <p class="section__sub">Life outside the work.</p>
+    </div>
+    <div class="hobbies-accordion">
+
+      <details class="hobbyacc">
+        <summary>
+          <span class="hobbyacc__title">Photography</span>
+          <span class="hobbyacc__date">2012 – Ongoing</span>
+          <span class="hobbyacc__plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="hobbyacc__body">
+          <p>Not with a camera in hand — just my phone, doing my best to catch the landscapes and moments I pass along the way.</p>
+          <figure class="hobbyshot hobbyshot--preview"><img src="assets/hobbies/photography/photography-01.jpg" alt="Landscape photograph" loading="lazy" /></figure>
+          <div class="hobbyblock__gallery" id="hg-photography"></div>
+        </div>
+      </details>
+
+      <details class="hobbyacc">
+        <summary>
+          <span class="hobbyacc__title">Food</span>
+          <span class="hobbyacc__date">2003 – Ongoing</span>
+          <span class="hobbyacc__plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="hobbyacc__body">
+          <p>I love to make food as much as I love to eat it, and I'll try anything new wherever I go. A little taste of it here.</p>
+          <figure class="hobbyshot hobbyshot--preview"><img src="assets/hobbies/food/food-01.jpg" alt="A favourite dish" loading="lazy" /></figure>
+          <div class="hobbyblock__gallery" id="hg-food"></div>
+        </div>
+      </details>
+
+      <details class="hobbyacc">
+        <summary>
+          <span class="hobbyacc__title">Skiing</span>
+          <span class="hobbyacc__date">2009 – Ongoing</span>
+          <span class="hobbyacc__plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="hobbyacc__body">
+          <p>Chasing snow across the Alps and beyond, from Val Gardena and Zermatt to Verbier, Bansko and the slopes of Türkiye.</p>
+          <figure class="hobbyshot hobbyshot--preview"><img src="assets/zermatt/zermatt-02.jpg" alt="Skiing under the Matterhorn" loading="lazy" /></figure>
+          <div class="hobbyblock__gallery" id="hg-skiing"></div>
+        </div>
+      </details>
+
+      <details class="hobbyacc">
+        <summary>
+          <span class="hobbyacc__title">Padel</span>
+          <span class="hobbyacc__date">2023 – Ongoing</span>
+          <span class="hobbyacc__plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="hobbyacc__body">
+          <p>Picked up padel in 2023 and I've been hooked ever since, from courts right by the sea in Bodrum to games back home.</p>
+          <div class="padel-photos">
+            <figure class="padel-photo padel-photo--sm"><img src="assets/hobbies/padel/padel-01.jpg" alt="Playing padel by the sea" loading="lazy" /></figure>
+            <figure class="padel-photo padel-photo--lg"><img src="assets/hobbies/padel/padel-02.jpg" alt="On the padel court" loading="lazy" /></figure>
+          </div>
+          <div class="padel-vids">
+            <div class="padel-vid"><iframe src="https://www.youtube.com/embed/l3vCFmHpFCk" title="Padel clip" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+            <div class="padel-vid"><iframe src="https://www.youtube.com/embed/c63PicpXvdM" title="Padel clip" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>
+          </div>
+        </div>
+      </details>
+
+      <details class="hobbyacc">
+        <summary>
+          <span class="hobbyacc__title">Jewellery Design</span>
+          <span class="hobbyacc__date">2025 – 2026</span>
+          <span class="hobbyacc__plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="hobbyacc__body">
+          <p>The "Jasmine" necklace and its matching ring are my own design — gold jasmine flowers set with emeralds — worked on over the past year.</p>
+          <p>The style grew out of a trip to Baku to study Zaha Hadid's architecture, her flowing "S" forms, alongside eastern traditions and ornament, which I translated into the curves and detailing of the pieces.</p>
+          <figure class="hobbyshot hobbyshot--preview"><img src="assets/hobbies/jewellery/jewellery-01.jpg" alt="The Jasmine necklace — my own design" loading="lazy" /></figure>
+          <div class="hobbyblock__gallery" id="hg-jewellery"></div>
+        </div>
+      </details>
+
+      <details class="hobbyacc">
+        <summary>
+          <span class="hobbyacc__title">Artistic Ceramics</span>
+          <span class="hobbyacc__date">2015 – 2021</span>
+          <span class="hobbyacc__plus" aria-hidden="true">+</span>
+        </summary>
+        <div class="hobbyacc__body">
+          <p>Six years of weekly artistic ceramics in the studio of Tuba Önder Demircioğlu, a national artist and member of the UKKSA consultative committee.</p>
+          <ul class="hobbyblock__list">
+            <li>Trained one on one in her studio, once a week for six years.</li>
+            <li>Two exhibitions: 13 to 20 June 2015, and 10 to 16 June 2016.</li>
+          </ul>
+          <p class="hobbyblock__note">References available on request.</p>
+          <figure class="ceramwall">
+            <img src="assets/hobbies/ceramics/ceramics-wall.jpg" alt="Collaborative ceramic tile wall made by children" loading="lazy" />
+            <figcaption>A ceramic wall we made together as an atelier, to celebrate the importance of freedom, creativity and happiness for children. Its opening was on 23 April 2017.</figcaption>
+          </figure>
+          <div class="hobbyblock__gallery" id="hg-ceramics"></div>
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact" id="contact">
+    <h2 class="contact__title">Let's work together.</h2>
+    <p class="contact__sub">Open to opportunities and collaborations.</p>
+    <div class="contact__links">
+      <a href="mailto:yasminsapoglu@gmail.com" class="btn btn--primary">Email me</a>
+      <a href="https://www.linkedin.com/in/yasminsapoglu/" target="_blank" rel="noopener" class="btn btn--ghost">LinkedIn</a>
+    </div>
+    <footer class="footer">© <span id="year"></span> Yasmin Sapoglu. Built with care.</footer>
+  </section>
+
+  <!-- ===== LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close">✕</button>
+    <img src="" alt="" id="lightboxImg" />
+  </div>
+
+  <div id="gtip" class="gtip"></div>
+
+  <!-- Scripts -->
+  <script src="js/main.js?v=14"></script>
+  <script src="js/feed.js?v=1"></script>
+  <script src="js/hobbies.js?v=7"></script>
+</body>
+</html>
