@@ -2,8 +2,7 @@
 
 A static, design-forward personal portfolio. No build step and no dependencies to install —
 open `index.html` in a browser and it works. It's a single page covering About, CV, Projects,
-Travels, Skills, Volunteering, Writing, the Slopes stats, a photo Gallery, and Hobbies. Some aspects of
-my life on one scrollable page you can explore.
+Travels, Skills, Volunteering, Writing, the Slopes stats, a photo Gallery, and Hobbies.
 
 ## Structure
 ```
@@ -51,11 +50,22 @@ from `assets/`. To add one, drop a resized image in `assets/` and add a `<figure
 
 ## University project (MyShop)
 The Xamarin.Forms source is bundled at `projects/MyShop-Xamarin-Solution.zip` and linked from the
-Projects section (build artifacts stripped). A demo of the app is available on the website.
+Projects section (build artifacts stripped).
 
 ## Colors & fonts
 All in `css/style.css` under `:root`. Change `--accent` to reskin the whole site.
 
+## Publish on GitHub Pages
+This folder is already a git repo with an initial commit on `main`. To put it online:
+```bash
+cd ~/Desktop/portfolio
+# create an empty repo on github.com, then:
+git remote add origin https://github.com/YOURUSERNAME/YOURREPO.git
+git push -u origin main
+```
+Then in the repo: **Settings → Pages → Build and deployment → Source: Deploy from a branch →
+`main` / `root`**. `index.html` sits at the repo root, so it becomes the site homepage. The site
+goes live at `https://YOURUSERNAME.github.io/YOURREPO/` within a minute.
 
 > The Travels globe loads D3 and a world map from a CDN, so it needs an internet connection.
 > Everything else works fully offline.

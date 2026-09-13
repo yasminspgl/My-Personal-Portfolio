@@ -136,8 +136,8 @@ async function renderGlobe() {
   // City markers: a small cluster per place, dot-count and sprawl scaled by
   // metro population. Kept light (no per-dot filters) so the globe spins
   // smoothly, and warm-toned to sit naturally on the green land.
-  const WARM = ["#ef7f2e", "#f4a03a", "#e8632a", "#ffb454", "#e07a34"];
-  const COOL = ["#ffffff", "#e6f0ff", "#cfe2ff"];
+  const WARM = ["#232323", "#333333", "#1a1a1a", "#3d3d3d", "#2a2a2a"]; // travel — near-black
+  const COOL = ["#6f6f6f", "#7f7f7f", "#5f5f5f"];                       // ski — mid grey
   const pick = (a) => a[(Math.random() * a.length) | 0];
 
   const LIGHTS = [];

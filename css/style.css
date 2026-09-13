@@ -3,26 +3,28 @@
    Design tokens
    ============================================================ */
 :root {
-  --bg:        #faf7f2;
+  --bg:        #f6f6f6;
   --bg-elev:   #ffffff;
-  --ink:       #1a1714;
-  --ink-soft:  #5c554d;
-  --line:      #e7e0d6;
-  --accent:    #c8642f;   /* warm terracotta */
-  --accent-2:  #2f6ec8;   /* travel blue */
-  --ski:       #3a9bd4;   /* ski cyan */
-  --shadow:    0 10px 40px -18px rgba(40,30,20,.35);
+  --ink:       #141414;
+  --ink-soft:  #5e5e5e;
+  --line:      #e6e6e6;
+  --accent:    #141414;   /* black & white: accent = ink */
+  --accent-2:  #3a3a3a;   /* dark grey */
+  --ski:       #6b6b6b;   /* mid grey */
+  --shadow:    0 10px 40px -18px rgba(0,0,0,.20);
   --radius:    18px;
   --maxw:      1080px;
   --maxw-wide: 1280px;
 }
 :root[data-theme="dark"] {
-  --bg:        #14110e;
-  --bg-elev:   #1e1a16;
-  --ink:       #f4efe8;
-  --ink-soft:  #b3a99d;
-  --line:      #2c2620;
-  --accent:    #e8824a;
+  --bg:        #0f0f0f;
+  --bg-elev:   #1a1a1a;
+  --ink:       #f4f4f4;
+  --ink-soft:  #a6a6a6;
+  --line:      #2a2a2a;
+  --accent:    #f4f4f4;
+  --accent-2:  #dcdcdc;
+  --ski:       #a6a6a6;
   --shadow:    0 10px 40px -16px rgba(0,0,0,.6);
 }
 
@@ -58,7 +60,7 @@ em { font-style: italic; color: var(--accent); }
   border: 1px solid var(--line); padding: .4rem .9rem; border-radius: 999px;
   color: var(--ink) !important;
 }
-.nav__cta:hover { background: var(--accent); color: #fff !important; border-color: var(--accent); }
+.nav__cta:hover { background: var(--accent); color: var(--bg) !important; border-color: var(--accent); }
 .nav__toggle { background: none; border: 1px solid var(--line); border-radius: 999px; width: 36px; height: 36px; cursor: pointer; color: var(--ink); font-size: 1rem; }
 
 /* ============================================================ HERO */
@@ -81,7 +83,7 @@ em { font-style: italic; color: var(--accent); }
 /* ============================================================ BUTTONS */
 .btn { display: inline-flex; align-items: center; gap: .5rem; padding: .8rem 1.5rem; border-radius: 999px; font-weight: 500; font-size: .95rem; cursor: pointer; transition: transform .2s, background .2s, box-shadow .2s; border: 1px solid transparent; }
 .btn--sm { padding: .5rem 1rem; font-size: .85rem; }
-.btn--primary { background: var(--accent); color: #fff; }
+.btn--primary { background: var(--accent); color: var(--bg); }
 .btn--primary:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
 .btn--ghost { border-color: var(--line); color: var(--ink); }
 .btn--ghost:hover { border-color: var(--accent); color: var(--accent); }
@@ -104,7 +106,7 @@ em { font-style: italic; color: var(--accent); }
 /* ============================================================ FILTER */
 .filter { display: flex; gap: .4rem; background: var(--bg-elev); border: 1px solid var(--line); border-radius: 999px; padding: .3rem; }
 .filter__btn { border: none; background: none; padding: .45rem 1.1rem; border-radius: 999px; cursor: pointer; font-size: .9rem; color: var(--ink-soft); transition: .2s; }
-.filter__btn.is-active { background: var(--accent); color: #fff; }
+.filter__btn.is-active { background: var(--accent); color: var(--bg); }
 
 /* ============================================================ CARDS */
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
@@ -135,7 +137,7 @@ em { font-style: italic; color: var(--accent); }
 
 /* "Back to top" cover (This Website card) */
 .card__media--top { display: flex; align-items: center; justify-content: center; text-decoration: none; transition: filter .3s; }
-.card__media--top span { font-family: "Fraunces", serif; font-weight: 500; font-size: 1.15rem; color: #5b3fa8; opacity: .85; }
+.card__media--top span { font-family: "Fraunces", serif; font-weight: 500; font-size: 1.15rem; color: var(--ink-soft); opacity: .85; }
 .card:hover .card__media--top span { opacity: 1; }
 
 /* Icon cover (line-art logo, e.g. Vera) */
@@ -155,9 +157,9 @@ em { font-style: italic; color: var(--accent); }
 
 /* Branded cover (CredX) */
 .card__brand { aspect-ratio: 16/10; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .55rem; text-align: center; padding: 1rem; }
-.card__brand--credx { background: linear-gradient(135deg, #7c5cd0, #5b3fa8); }
+.card__brand--credx { background: linear-gradient(135deg, #3a3a3a, #1b1b1b); }
 .card__brand .brandmark { font-family: "Fraunces", serif; font-weight: 600; font-size: clamp(2rem, 8vw, 3rem); letter-spacing: .03em; color: #fff; line-height: 1; }
-.card__brand .brandmark i { color: #f2b134; font-style: normal; }
+.card__brand .brandmark i { color: #cfcfcf; font-style: normal; }
 .card__brand .brandsub { color: rgba(255,255,255,.92); font-size: .8rem; letter-spacing: .02em; }
 
 /* "How I'd scale this" note */
