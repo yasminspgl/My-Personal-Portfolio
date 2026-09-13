@@ -69,3 +69,6 @@ goes live at `https://YOURUSERNAME.github.io/YOURREPO/` within a minute.
 
 > The Travels globe loads D3 and a world map from a CDN, so it needs an internet connection.
 > Everything else works fully offline.
+
+## Credits
+Built by Yasmin Sapoglu, with assistance from Claude Opus 4.8 (Anthropic).
